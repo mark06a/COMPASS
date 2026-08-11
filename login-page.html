@@ -3,79 +3,163 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>COMPASS - Sign In</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-   <body>
 
-  <!-- =========================
-       LEFT PANEL
-       ========================= -->
-  <div class="left-panel">
+  <title>COMPASS - Sign In</title>
+
+  <!-- Inter Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            inter: ["Inter", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="min-h-screen flex bg-gray-50 font-inter">
+
+  <!-- LEFT PANEL -->
+  <section
+    class="
+      hidden lg:flex
+      w-[40.3%]
+      min-h-screen
+      bg-gradient-to-b
+      from-[#3b5fe0]
+      via-[#2545c8]
+      to-[#1e3bb5]
+      p-20
+      flex-col
+      justify-between
+      text-white
+    "
+  >
 
     <!-- LOGO -->
-    <div class="logo">
+    <div class="flex items-center gap-4">
 
-      <div class="logo-mark">
+      <div
+        class="
+          w-12 h-12
+          bg-white/15
+          rounded-xl
+          flex items-center justify-center
+        "
+      >
         <img
           src="assets/icons/compass.png"
           alt="COMPASS logo icon"
+          class="w-8 h-8 object-contain"
         >
       </div>
 
-      <div class="logo-text">
-        <h1>COMPASS</h1>
-        <span>OUTCOMES INTELLIGENCE</span>
+      <div>
+        <h1 class="text-xl font-semibold tracking-[0.5px]">
+          COMPASS
+        </h1>
+
+        <span class="text-[11px] font-medium tracking-[1px] text-slate-50">
+          OUTCOMES INTELLIGENCE
+        </span>
       </div>
 
     </div>
 
 
     <!-- VALUE STATEMENT -->
-    <div class="value-statement">
+    <div class="my-auto">
 
-      <div class="value-label">
+      <div
+        class="
+          text-[11px]
+          font-medium
+          tracking-[2px]
+          text-slate-50
+          mb-6
+        "
+      >
         CURRICULUM OUTCOMES EVALUATION
       </div>
 
-      <h2 class="value-headline">
+      <h2
+        class="
+          text-[56px]
+          font-normal
+          leading-[1.1]
+          mb-6
+        "
+      >
         Evidence for every academic decision.
       </h2>
 
-      <p class="value-desc">
-        Bring alumni outcomes, workplace signals, and curriculum performance into one shared intelligence system.
+      <p
+        class="
+          text-base
+          text-slate-50
+          leading-[1.5]
+          max-w-[440px]
+        "
+      >
+        Bring alumni outcomes, workplace signals, and curriculum
+        performance into one shared intelligence system.
       </p>
 
     </div>
 
 
     <!-- LEFT FOOTER -->
-    <div class="left-footer">
+    <div class="border-t border-white/20 pt-8">
 
-      <div class="footer-item">
+      <!-- GRADUATE OUTCOMES -->
+      <div class="mb-6">
 
-        <div class="footer-item-header">
-          <span class="footer-num">01</span>
-          <span class="footer-title">Graduate outcomes</span>
+        <div class="flex items-center gap-4 mb-1.5">
+
+          <span class="text-[11px] font-semibold text-white/50">
+            01
+          </span>
+
+          <span class="text-sm font-semibold">
+            Graduate outcomes
+          </span>
+
         </div>
 
-        <p class="footer-desc">
+        <p class="text-[13px] text-[#b2bcd0]">
           Track employment, job alignment, skills, and locations.
         </p>
 
       </div>
 
 
-      <div class="footer-item">
+      <!-- CURRICULUM INTELLIGENCE -->
+      <div>
 
-        <div class="footer-item-header">
-          <span class="footer-num">02</span>
-          <span class="footer-title">Curriculum intelligence</span>
+        <div class="flex items-center gap-4 mb-1.5">
+
+          <span class="text-[11px] font-semibold text-white/50">
+            02
+          </span>
+
+          <span class="text-sm font-semibold">
+            Curriculum intelligence
+          </span>
+
         </div>
 
-        <p class="footer-desc">
+        <p class="text-[13px] text-[#b2bcd0]">
           Turn tracer evidence into review-ready insight.
         </p>
 
@@ -83,29 +167,55 @@
 
     </div>
 
-  </div>
-  <!-- LEFT PANEL ENDS HERE -->
+  </section>
 
 
-  <!-- =========================
-       RIGHT PANEL
-       ========================= -->
-  <div class="right-panel">
+  <!-- RIGHT PANEL -->
+  <main
+    class="
+      flex-1
+      min-h-screen
+      bg-white
+      flex
+      items-center
+      justify-center
+      px-6
+      py-10
+      lg:p-20
+    "
+  >
 
-    <div class="form-container">
+    <!-- FORM -->
+    <div class="w-full max-w-[420px]">
 
-      <!-- FORM HEADER -->
-      <div class="form-header">
+      <!-- HEADER -->
+      <div class="mb-8">
 
-        <div class="welcome-label">
+        <div
+          class="
+            text-[11px]
+            font-semibold
+            text-gray-500
+            tracking-[1.5px]
+            uppercase
+            mb-3
+          "
+        >
           WELCOME BACK
         </div>
 
-        <h1 class="form-title">
+        <h1
+          class="
+            text-4xl
+            font-normal
+            text-gray-900
+            mb-3
+          "
+        >
           Sign in to your workspace
         </h1>
 
-        <p class="form-subtitle">
+        <p class="text-sm text-gray-500">
           Access your outcomes workspace or alumni account.
         </p>
 
@@ -113,13 +223,48 @@
 
 
       <!-- ACCOUNT SWITCHER -->
-      <div class="account-switcher">
+      <div
+        class="
+          flex
+          p-1
+          border
+          border-gray-200
+          rounded-lg
+          mb-8
+          bg-white
+        "
+      >
 
-        <button class="tab active" type="button">
+        <button
+          type="button"
+          class="
+            flex-1
+            p-2.5
+            text-center
+            text-[13px]
+            font-semibold
+            text-gray-900
+            rounded-md
+            bg-gray-100
+          "
+        >
           Alumni account
         </button>
 
-        <button class="tab" type="button">
+        <button
+          type="button"
+          class="
+            flex-1
+            p-2.5
+            text-center
+            text-[13px]
+            font-medium
+            text-gray-500
+            rounded-md
+            hover:bg-gray-50
+            transition
+          "
+        >
           Institution account
         </button>
 
@@ -127,46 +272,124 @@
 
 
       <!-- EMAIL -->
-      <div class="field-group">
+      <div class="mb-5">
 
-        <label class="field-label" for="email">
+        <label
+          for="email"
+          class="
+            block
+            text-[13px]
+            font-medium
+            text-gray-700
+            mb-2
+          "
+        >
           Alumni email
         </label>
 
         <input
-          class="field-input"
           id="email"
-          type="text"
+          name="email"
+          type="email"
+          autocomplete="email"
+          class="
+            w-full
+            h-11
+            px-4
+            border
+            border-gray-200
+            rounded-lg
+            text-[13px]
+            text-gray-900
+            bg-white
+            outline-none
+            focus:border-blue-600
+            focus:ring-4
+            focus:ring-blue-600/10
+          "
         >
 
       </div>
 
 
       <!-- PASSWORD -->
-      <div class="field-group">
+      <div class="mb-5">
+
+        <label
+          for="password"
+          class="
+            block
+            text-[13px]
+            font-medium
+            text-gray-700
+            mb-2
+          "
+        >
+          Password
+        </label>
 
         <input
-          class="field-input"
           id="password"
+          name="password"
+          type="password"
+          autocomplete="current-password"
+          class="
+            w-full
+            h-11
+            px-4
+            border
+            border-gray-200
+            rounded-lg
+            text-[13px]
+            text-gray-900
+            bg-white
+            outline-none
+            focus:border-blue-600
+            focus:ring-4
+            focus:ring-blue-600/10
+          "
+        >
+
       </div>
 
 
       <!-- FORGOT PASSWORD -->
-      <a href="#" class="forgot-link">
-        Forgot password?
-      </a>
+      <div class="-mt-3 mb-5 text-right">
+
+        <a
+          href="#"
+          class="
+            text-[13px]
+            font-medium
+            text-blue-600
+            hover:underline
+          "
+        >
+          Forgot password?
+        </a>
+
+      </div>
 
 
       <!-- REMEMBER ME -->
-      <div class="checkbox-row">
+      <div class="flex items-center gap-2 mb-8">
 
         <input
           type="checkbox"
           id="remember"
           checked
+          class="
+            w-4
+            h-4
+            accent-[#264eeb]
+            cursor-pointer
+          "
         >
 
-        <label for="remember">
+        <label
+          for="remember"
+          class="text-[13px] text-gray-500 cursor-pointer"
+        >
           Keep me signed in
         </label>
 
@@ -174,27 +397,77 @@
 
 
       <!-- LOGIN BUTTON -->
-      <button class="primary-btn" type="button">
+      <button
+        type="button"
+        class="
+          w-full
+          h-12
+          bg-[#264eeb]
+          text-white
+          rounded-lg
+          text-sm
+          font-semibold
+          cursor-pointer
+          hover:bg-[#1e3fd0]
+          transition-colors
+        "
+      >
         Open my Compass account
       </button>
 
 
-      <!-- OR DIVIDER -->
-      <div class="or-divider">
+      <!-- DIVIDER -->
+      <div class="flex items-center gap-4 my-5">
 
-        <div class="line"></div>
+        <div class="flex-1 h-px bg-gray-300"></div>
 
-        <span>or</span>
+        <span class="text-[13px] text-gray-500">
+          or
+        </span>
 
-        <div class="line"></div>
+        <div class="flex-1 h-px bg-gray-300"></div>
 
       </div>
 
 
       <!-- LINKEDIN -->
-      <button class="linkedin-btn" type="button">
+      <button
+        type="button"
+        class="
+          w-full
+          h-12
+          bg-white
+          text-gray-700
+          border-[1.5px]
+          border-gray-300
+          rounded-lg
+          text-[15px]
+          font-medium
+          cursor-pointer
+          flex
+          items-center
+          justify-center
+          gap-2.5
+          hover:bg-gray-50
+          hover:border-[#0a66c2]
+          transition-all
+        "
+      >
 
-        <span class="linkedin-icon">
+        <span
+          class="
+            w-5
+            h-5
+            bg-[#0a66c2]
+            rounded
+            flex
+            items-center
+            justify-center
+            text-sm
+            font-bold
+            text-white
+          "
+        >
           in
         </span>
 
@@ -203,22 +476,32 @@
       </button>
 
 
-      <!-- BOTTOM LINKS -->
-      <div class="secondary-links">
+      <!-- REGISTER -->
+      <div class="mt-5 text-center">
 
-        <p>
+        <p class="text-[13px] text-gray-500">
+
           Need an account?
-          <a href="#">
+
+          <a
+            href="#"
+            class="
+              text-gray-900
+              font-semibold
+              hover:underline
+            "
+          >
             Register with Compass
           </a>
+
         </p>
-        
+
       </div>
 
     </div>
 
-  </div>
-  <!-- RIGHT PANEL ENDS HERE -->
+  </main>
+
 
 </body>
 </html>
