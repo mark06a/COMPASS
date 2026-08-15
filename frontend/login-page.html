@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COMPASS - Sign In</title>
+  <link rel="icon" type="image/png" href="assets/icons/compass.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { fontFamily: { inter: ["Inter", "sans-serif"] } } }
+    }
+  </script>
+  <style>
+    @keyframes shake { 0%,100%{transform:translateX(0)} 20%,60%{transform:translateX(-6px)} 40%,80%{transform:translateX(6px)} }
+  </style>
+</head>
+
+<body class="min-h-screen flex bg-gray-50 font-inter">
+
+  <!-- LEFT PANEL -->
+  <section class="hidden lg:flex w-[40.3%] min-h-screen bg-gradient-to-b from-[#3b5fe0] via-[#2545c8] to-[#1e3bb5] p-20 flex-col justify-between text-white">
+    <div class="flex items-center gap-4">
+      <div class="w-12 h-12 bg-white/15 rounded-xl flex items-center justify-center"><img src="assets/icons/compass.png" alt="COMPASS" class="w-8 h-8 object-contain"></div>
+      <div><h1 class="text-xl font-semibold tracking-[0.5px]">COMPASS</h1><span class="text-[11px] font-medium tracking-[1px] text-slate-50">OUTCOMES INTELLIGENCE</span></div>
+    </div>
+    <div class="my-auto">
+      <div class="text-[11px] font-medium tracking-[2px] text-slate-50 mb-6">CURRICULUM OUTCOMES EVALUATION</div>
+      <h2 class="text-[44px] font-normal leading-tight mb-6">Evidence for every academic decision.</h2>
+      <p class="text-base text-slate-50 leading-[1.5] max-w-[440px]">Bring alumni outcomes, workplace signals, and curriculum performance into one shared intelligence system.</p>
+    </div>
+    <div class="border-t border-white/20 pt-8">
+      <div class="mb-6"><div class="flex items-center gap-4 mb-1.5"><span class="text-[11px] font-semibold text-white/50">01</span><span class="text-sm font-semibold">Graduate outcomes</span></div><p class="text-[13px] text-[#b2bcd0]">Track employment, job alignment, skills, and locations.</p></div>
+      <div><div class="flex items-center gap-4 mb-1.5"><span class="text-[11px] font-semibold text-white/50">02</span><span class="text-sm font-semibold">Curriculum intelligence</span></div><p class="text-[13px] text-[#b2bcd0]">Turn tracer evidence into review-ready insight.</p></div>
+    </div>
+  </section>
+
+  <!-- RIGHT PANEL -->
+  <main class="flex-1 min-h-screen bg-white flex items-center justify-center px-6 py-10 lg:p-20">
+    <div class="w-full max-w-[420px]">
+      <div class="mb-8">
+        <div class="text-[11px] font-semibold text-gray-500 tracking-[1.5px] uppercase mb-3">WELCOME BACK</div>
+        <h1 class="text-[32px] font-normal leading-tight">Sign in to your workspace</h1>
+        <p class="text-sm text-gray-500 mt-3">Access your outcomes workspace or alumni account.</p>
+      </div>
+
+      <div class="flex p-1 border border-gray-200 rounded-lg mb-8 bg-white">
+        <button type="button" id="alumniTab" onclick="switchTab('alumni')" class="flex-1 p-2.5 text-center text-[13px] font-semibold text-gray-900 rounded-md bg-gray-100">Alumni account</button>
+        <button type="button" id="institutionTab" onclick="switchTab('institution')" class="flex-1 p-2.5 text-center text-[13px] font-medium text-gray-500 rounded-md hover:bg-gray-50 transition">Institution account</button>
+      </div>
+
+      <!-- ERROR / SUCCESS MESSAGES -->
+      <div id="loginError" class="hidden mb-5 p-3.5 bg-red-50 border border-red-200 rounded-lg flex items-center gap-3">
+        <svg class="w-4 h-4 text-red-500 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/></svg>
+        <p id="loginErrorMsg" class="text-[13px] text-red-600 font-medium"></p>
+      </div>
+
+      <div id="linkedinErrorBanner" class="hidden mb-5 p-3.5 bg-red-50 border border-red-200 rounded-lg flex items-center gap-3">
+        <svg class="w-4 h-4 text-red-500 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/></svg>
+        <p class="text-[13px] text-red-600 font-medium" id="linkedinErrorMsg">LinkedIn sign-in failed. Please try again.</p>
+      </div>
+
+      <!-- EMAIL -->
+      <div class="mb-5">
+        <label for="email" class="block text-[13px] font-medium text-gray-700 mb-2" id="emailLabel">Alumni email</label>
+        <input id="email" name="email" type="text" autocomplete="email" class="w-full h-11 px-4 border border-gray-200 rounded-lg text-[13px] text-gray-900 bg-white outline-none focus:border-blue-600 focus:ring-4 focus:ring-blue-600/10">
+      </div>
+
+      <!-- PASSWORD -->
+      <div class="mb-5">
+        <label for="password" class="block text-[13px] font-medium text-gray-700 mb-2">Password</label>
+        <div class="relative">
+          <input id="password" name="password" type="password" autocomplete="current-password" class="w-full h-11 px-4 pr-11 border border-gray-200 rounded-lg text-[13px] text-gray-900 bg-white outline-none focus:border-blue-600 focus:ring-4 focus:ring-blue-600/10">
+          <button type="button" onclick="togglePassword()" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600">
+            <svg id="eyeOff" class="w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17.94 17.94A10.07 10.07 0 0112 20c-7 0-11-8-11-8a18.45 18.45 0 015.06-5.94M9.9 4.24A9.12 9.12 0 0112 4c7 0 11 8 11 8a18.5 18.5 0 01-2.16 3.19m-6.72-1.07a3 3 0 11-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+            <svg id="eyeOn" class="hidden w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="-mt-3 mb-5 text-right"><a href="forgot-password.html" class="text-[13px] font-medium text-[#3154E8] hover:underline">Forgot password?</a></div>
+
+      <div class="flex items-center gap-2 mb-8">
+        <input type="checkbox" id="remember" checked class="w-4 h-4 accent-[#264eeb] cursor-pointer">
+        <label for="remember" class="text-[13px] text-gray-500 cursor-pointer">Keep me signed in</label>
+      </div>
+
+      <button type="button" onclick="handleLogin()" class="w-full h-12 bg-[#264eeb] text-white rounded-lg text-sm font-semibold cursor-pointer hover:bg-[#1e3fd0] transition-colors">Open my Compass account</button>
+
+      <div class="flex items-center gap-4 my-5">
+        <div class="flex-1 h-px bg-gray-300"></div>
+        <span class="text-[13px] text-gray-500">or</span>
+        <div class="flex-1 h-px bg-gray-300"></div>
+      </div>
+
+      <!-- LINKEDIN BUTTON — redirects to /auth/linkedin on backend -->
+      <a href="https://www.linkedin.com/oauth/v2/authorization?response_type=code&state=987654321&scope=r_liteprofile%20r_emailaddress&client_id=clientId&redirect_uri=URLENCODE(redirectURI)"
+   class="w-full h-12 bg-white text-gray-700 border-[1.5px] border-gray-300 rounded-lg text-[15px] font-medium cursor-pointer flex items-center justify-center gap-2.5 hover:bg-[#f0f6ff] hover:border-[#0a66c2] hover:text-[#0a66c2] transition-all no-underline">
+
+  <svg class="w-5 h-5 text-[#0a66c2]" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+  </svg>
+
+  Sign in with LinkedIn
+</a>
+
+      <div class="mt-5 text-center">
+        <p class="text-[13px] text-gray-500">Need an account? <a href="register.html" class="text-gray-900 font-semibold hover:underline">Register with Compass</a></p>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // ── Check for LinkedIn error in URL ──
+    var urlParams = new URLSearchParams(window.location.search);
+    var linkedinError = urlParams.get('error');
+    if (linkedinError) {
+      var banner = document.getElementById('linkedinErrorBanner');
+      var msg = document.getElementById('linkedinErrorMsg');
+      if (linkedinError === 'linkedin_cancelled') {
+        msg.textContent = 'LinkedIn sign-in was cancelled. Please try again.';
+      } else if (linkedinError === 'linkedin_auth_failed') {
+        msg.textContent = 'LinkedIn authentication failed. Please try again.';
+      } else {
+        msg.textContent = 'Something went wrong with LinkedIn sign-in.';
+      }
+      banner.classList.remove('hidden');
+      // Clean URL
+      window.history.replaceState({}, document.title, window.location.pathname);
+    }
+
+    // ── Credentials ──
+    var USERS = { alumni:{email:'admin1',password:'admin1'}, institution:{email:'admin1',password:'admin1'} };
+    var activeTab = 'alumni';
+
+    // ── Tab Switching ──
+    function switchTab(tab) {
+      activeTab = tab;
+      var a=document.getElementById('alumniTab'), i=document.getElementById('institutionTab'), l=document.getElementById('emailLabel');
+      if(tab==='alumni'){a.className='flex-1 p-2.5 text-center text-[13px] font-semibold text-gray-900 rounded-md bg-gray-100';i.className='flex-1 p-2.5 text-center text-[13px] font-medium text-gray-500 rounded-md hover:bg-gray-50 transition';l.textContent='Alumni email'}
+      else{i.className='flex-1 p-2.5 text-center text-[13px] font-semibold text-gray-900 rounded-md bg-gray-100';a.className='flex-1 p-2.5 text-center text-[13px] font-medium text-gray-500 rounded-md hover:bg-gray-50 transition';l.textContent='Institution email'}
+      document.getElementById('loginError').classList.add('hidden');
+      document.getElementById('linkedinErrorBanner').classList.add('hidden');
+    }
+
+    // ── Show/Hide Password ──
+    function togglePassword() {
+      var inp=document.getElementById('password'), h=inp.type==='password';
+      inp.type = h ? 'text' : 'password';
+      document.getElementById('eyeOff').classList.toggle('hidden', h);
+      document.getElementById('eyeOn').classList.toggle('hidden', !h);
+    }
+
+    // ── Login Handler ──
+    function handleLogin() {
+      var e=document.getElementById('email').value.trim(), p=document.getElementById('password').value;
+      var ed=document.getElementById('loginError'), em=document.getElementById('loginErrorMsg');
+      document.getElementById('linkedinErrorBanner').classList.add('hidden');
+      if(!e||!p){em.textContent='Please enter both email and password.';ed.classList.remove('hidden');return}
+      var c=USERS[activeTab];
+      if(e===c.email && p===c.password){ed.classList.add('hidden');window.location.href='update-employment.html'}
+      else{em.textContent='Invalid email or password. Please try again.';ed.classList.remove('hidden');ed.style.animation='none';ed.offsetHeight;ed.style.animation='shake 0.4s ease'}
+    }
+
+    // ── Enter key ──
+    document.getElementById('password').addEventListener('keydown',function(e){if(e.key==='Enter')handleLogin()});
+    document.getElementById('email').addEventListener('keydown',function(e){if(e.key==='Enter')handleLogin()});
+  </script>
+</body>
+</html>

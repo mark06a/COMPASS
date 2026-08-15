@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Update Employment - COMPASS</title>
+  <link rel="icon" type="image/png" href="assets/icons/compa.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>body{font-family:'Inter',sans-serif;}.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.35);z-index:100;align-items:center;justify-content:center;}.modal-overlay.active{display:flex;}.step-btn{cursor:pointer;transition:all 0.2s}.step-btn:hover{opacity:0.8}html{scroll-behavior:smooth}.section-highlight{animation:highlightPulse 1.5s ease-out}@keyframes highlightPulse{0%{box-shadow:0 0 0 3px rgba(59,130,246,0.5)}100%{box-shadow:0 0 0 0px rgba(59,130,246,0)}}</style>
+</head>
+<body class="bg-gray-50 h-screen flex overflow-hidden">
+  <!-- SIDEBAR -->
+  <aside class="w-[240px] bg-white border-r border-gray-200 flex flex-col h-full shrink-0">
+    <div class="h-[56px] px-4 flex items-center gap-[10px] shrink-0">
+      <div class="w-[26px] h-[26px] bg-blue-600 rounded-md flex items-center justify-center shrink-0"><img src="assets/icons/compass.png" class="w-[18px] h-[18px]" alt="" onerror="this.style.display='none'" /></div>
+      <div><p class="text-sm font-bold text-gray-900 leading-tight">COMPASS</p><p class="text-[10px] text-gray-500 leading-tight">Alumni Portal</p></div>
+    </div>
+    <nav class="flex-1 px-4 pt-2 pb-[14px] text-[13px] flex flex-col gap-4">
+      <div class="flex flex-col gap-[3px]"><p class="text-[10px] font-semibold text-gray-500 uppercase tracking-wide">Alumni Portal</p><div class="h-[3px]"></div>
+        <a href="update-employment.html" class="flex items-center gap-[9px] px-[10px] py-[7px] rounded-[7px] bg-blue-600 text-white font-semibold"><svg class="w-[14px] h-[14px] shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>Update Employment</a>
+        <a href="tracer-survey.html" class="flex items-center gap-[9px] px-[10px] py-[7px] rounded-[7px] text-gray-600 hover:bg-gray-100 font-medium"><svg class="w-[14px] h-[14px] shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/><path d="M9 14l2 2 4-4"/></svg>Tracer Survey</a>
+        <a href="curriculum-feedback.html" class="flex items-center gap-[9px] px-[10px] py-[7px] rounded-[7px] text-gray-600 hover:bg-gray-100 font-medium"><svg class="w-[14px] h-[14px] shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>Curriculum Feedback</a>
+        <a href="competency-feedback.html" class="flex items-center gap-[9px] px-[10px] py-[7px] rounded-[7px] text-gray-600 hover:bg-gray-100 font-medium"><svg class="w-[14px] h-[14px] shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>Competency Feedback</a>
+      </div>
+      <div class="flex flex-col gap-[3px]"><p class="text-[10px] font-semibold text-gray-500 uppercase tracking-wide">Surveys &amp; Feedback</p><div class="h-[3px]"></div>
+        <a href="announcements.html" class="flex items-center gap-[9px] px-[10px] py-[7px] rounded-[7px] text-gray-600 hover:bg-gray-100 font-medium"><svg class="w-[14px] h-[14px] shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"/></svg>Announcements</a>
+        <a href="documents.html" class="flex items-center gap-[9px] px-[10px] py-[7px] rounded-[7px] text-gray-600 hover:bg-gray-100 font-medium"><svg class="w-[14px] h-[14px] shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/></svg>Documents</a>
+        <a href="newsfeed.html" class="flex items-center gap-[9px] px-[10px] py-[7px] rounded-[7px] text-gray-600 hover:bg-gray-100 font-medium"><svg class="w-[14px] h-[14px] shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2"/></svg>Newsfeed</a>
+      </div>
+    </nav>
+  </aside>
+  <div class="flex-1 flex flex-col h-full overflow-hidden">
+    <!-- HEADER -->
+    <header class="h-[58px] bg-white border-b border-gray-200 flex items-center px-6 shrink-0 justify-between relative z-50">
+      <div class="relative" id="searchContainer"><svg class="w-[14px] h-[14px] text-gray-400 absolute left-3 top-1/2 -translate-y-1/2 z-10" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg><input id="searchInput" type="text" placeholder="Search courses, outcomes, competencies..." class="pl-10 pr-3 py-[10px] text-[13px] border border-gray-200 rounded-lg w-[394px] h-[36px] focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100" autocomplete="off" />
+        <div id="searchDropdown" class="hidden absolute left-0 top-[42px] w-[500px] bg-white border border-gray-200 rounded-xl z-50"><div class="p-4"><p class="text-[11px] font-semibold text-gray-500 uppercase tracking-wide mb-3">Recent searches</p><p class="text-sm text-gray-400">No recent searches</p></div></div>
+      </div>
+      <div class="flex items-center gap-[10px]">
+        <div class="relative" id="notifWrap">
+          <button id="notifBtn" class="relative w-[36px] h-[36px] flex items-center justify-center bg-gray-100 border border-gray-200 rounded-lg cursor-pointer hover:bg-gray-200 transition"><svg class="w-4 h-4 text-gray-900" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6 6 0 10-12 0v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0a3 3 0 11-6 0"/></svg><span id="notifBadge" class="absolute -top-1 -right-1 w-4 h-4 bg-blue-600 text-white text-[9px] font-bold rounded-full flex items-center justify-center">4</span></button>
+          <div id="notifDropdown" class="hidden absolute right-0 top-[44px] w-[380px] bg-white rounded-xl border border-gray-200 shadow-lg z-50">
+            <div class="px-5 pt-5 pb-3 flex items-center justify-between"><p class="text-[10px] font-semibold text-gray-500 uppercase tracking-widest">Notifications</p><button id="markAllReadBtn" class="text-[12px] font-medium text-gray-500 hover:text-blue-600">Mark all read</button></div>
+            <div class="px-5 pb-2"><h3 class="text-base font-extrabold text-gray-900">Activity Needing Attention</h3></div>
+            <div class="px-3 pb-3 space-y-1">
+              <a href="notification-detail.html" class="flex items-start gap-3 px-3 py-3 rounded-lg hover:bg-gray-50"><div class="w-[32px] h-[32px] bg-yellow-100 rounded-full flex items-center justify-center shrink-0 mt-0.5"><svg class="w-4 h-4 text-yellow-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 9v2m0 4h.01M10.29 3.86l-8.58 14.86a1 1 0 00.87 1.5h17.16a1 1 0 00.87-1.5L11.71 3.86a1 1 0 00-1.74 0z"/></svg></div><div class="flex-1 min-w-0"><p class="text-[11px] text-gray-500"><span class="text-yellow-600 font-semibold">Important</span> · 5 min ago</p><p class="text-[13px] font-bold text-gray-900 mt-0.5">Update your alumni information</p></div><span class="notif-dot w-2 h-2 bg-blue-600 rounded-full shrink-0 mt-2"></span></a>
+              <a href="tracer-survey.html" class="flex items-start gap-3 px-3 py-3 rounded-lg hover:bg-gray-50"><div class="w-[32px] h-[32px] bg-blue-100 rounded-full flex items-center justify-center shrink-0 mt-0.5"><svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></div><div class="flex-1 min-w-0"><p class="text-[11px] text-gray-500"><span class="text-blue-600 font-semibold">Survey</span> · 1 hour ago</p><p class="text-[13px] font-bold text-gray-900 mt-0.5">Complete your Tracer Survey</p></div><span class="notif-dot w-2 h-2 bg-blue-600 rounded-full shrink-0 mt-2"></span></a>
+              <a href="announcements.html" class="flex items-start gap-3 px-3 py-3 rounded-lg hover:bg-gray-50"><div class="w-[32px] h-[32px] bg-green-100 rounded-full flex items-center justify-center shrink-0 mt-0.5"><svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"/></svg></div><div class="flex-1 min-w-0"><p class="text-[11px] text-gray-500"><span class="text-green-600 font-semibold">Announcement</span> · 3 hours ago</p><p class="text-[13px] font-bold text-gray-900 mt-0.5">Alumni Homecoming 2026 registration open</p></div><span class="notif-dot w-2 h-2 bg-blue-600 rounded-full shrink-0 mt-2"></span></a>
+              <a href="newsfeed.html" class="flex items-start gap-3 px-3 py-3 rounded-lg hover:bg-gray-50"><div class="w-[32px] h-[32px] bg-purple-100 rounded-full flex items-center justify-center shrink-0 mt-0.5"><svg class="w-4 h-4 text-purple-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/></svg></div><div class="flex-1 min-w-0"><p class="text-[11px] text-gray-500"><span class="text-purple-600 font-semibold">Comment</span> · Yesterday</p><p class="text-[13px] font-bold text-gray-900 mt-0.5">Sarah Yuson commented on your post</p></div><span class="notif-dot w-2 h-2 bg-blue-600 rounded-full shrink-0 mt-2"></span></a>
+            </div>
+            <div class="border-t border-gray-200 px-5 py-3"><a href="activity-history.html" class="text-[13px] font-semibold text-gray-900 hover:text-blue-600 flex items-center gap-1">View all activity <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></a></div>
+          </div>
+        </div>
+        <div class="relative">
+          <button id="avatarBtn" class="flex items-center gap-2 h-[42px] bg-gray-100 border border-gray-200 rounded-lg py-[6px] pl-[8px] pr-[10px] cursor-pointer hover:bg-gray-200 transition"><div class="w-[28px] h-[28px] bg-[#111113] border-2 border-[#111113] rounded-full flex items-center justify-center text-white text-[11px] font-semibold shrink-0">MA</div><div class="leading-tight text-left"><p class="text-[13px] font-semibold text-gray-900">Mark Jacinto</p><p class="text-[11px] text-gray-500 mt-px">Alumni</p></div><svg class="w-3 h-3 text-gray-900 shrink-0" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg></button>
+          <div id="userDropdown" class="hidden absolute right-0 top-[50px] w-[260px] bg-white border border-gray-200 rounded-xl shadow-lg z-50"><div class="p-4"><p class="text-[10px] font-semibold text-gray-500 uppercase tracking-wide mb-3">User Account</p><div class="flex items-center gap-3 pb-3 border-b border-gray-200"><div class="w-[36px] h-[36px] bg-[#111113] rounded-full flex items-center justify-center text-white text-[13px] font-semibold shrink-0">MJ</div><div><p class="text-[13px] font-semibold text-gray-900">Mark Jacinto</p><p class="text-[11px] text-gray-500">mark***@gmail.com</p><p class="text-[11px] text-gray-500">Alumni · Batch 2024</p></div></div></div><div class="px-2 pb-2"><a href="my-profile.html" class="flex items-center gap-[9px] px-3 py-[8px] rounded-lg text-[13px] text-gray-700 hover:bg-gray-100 font-medium"><svg class="w-[14px] h-[14px] shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>My Profile</a><a href="account-settings.html" class="flex items-center gap-[9px] px-3 py-[8px] rounded-lg text-[13px] text-gray-700 hover:bg-gray-100 font-medium"><svg class="w-[14px] h-[14px] shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>Account Settings</a><a href="activity-history.html" class="flex items-center gap-[9px] px-3 py-[8px] rounded-lg text-[13px] text-gray-700 hover:bg-gray-100 font-medium"><svg class="w-[14px] h-[14px] shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Activity History</a><a href="help-support.html" class="flex items-center gap-[9px] px-3 py-[8px] rounded-lg text-[13px] text-gray-700 hover:bg-gray-100 font-medium"><svg class="w-[14px] h-[14px] shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>Help &amp; Support</a><div class="h-px bg-gray-200 my-1 mx-1"></div><button id="logoutBtn" class="w-full flex items-center gap-[9px] px-3 py-[8px] rounded-lg text-[13px] text-red-500 hover:bg-red-50 font-medium"><svg class="w-[14px] h-[14px] shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>Logout</button></div></div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Toast -->
+    <div id="successToast" class="hidden fixed top-6 right-6 z-[200] bg-green-600 text-white px-5 py-3 rounded-xl shadow-lg flex items-center gap-3 text-sm font-semibold"><svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg><span id="toastMsg">Success!</span></div>
+
+    <!-- MAIN -->
+    <main id="mainContent" class="flex-1 overflow-y-auto p-8">
+      <div>
+        <h1 class="text-2xl font-extrabold text-gray-900">Update Employment Information</h1>
+        <p class="text-sm text-gray-500 mt-1">Keep your employment records up to date. This helps the university track alumni career outcomes and provide better support.</p>
+
+        <!-- Stepper -->
+        <div class="flex items-center gap-6 mt-6 mb-8">
+          <div class="flex items-center gap-2 step-btn" onclick="scrollToSection('sectionA')">
+            <div id="stepA" class="w-7 h-7 rounded-full border-2 border-blue-600 text-blue-600 flex items-center justify-center text-xs font-bold transition-all">A</div>
+            <span id="stepALabel" class="text-[13px] font-semibold text-blue-600 transition-all">Personal Info</span>
+          </div>
+          <div class="h-px w-8 bg-gray-300"></div>
+          <div class="flex items-center gap-2 step-btn" onclick="scrollToSection('sectionB')">
+            <div id="stepB" class="w-7 h-7 rounded-full border-2 border-gray-300 text-gray-400 flex items-center justify-center text-xs font-bold transition-all">B</div>
+            <span id="stepBLabel" class="text-[13px] font-semibold text-gray-400 transition-all">Employment</span>
+          </div>
+          <div class="h-px w-8 bg-gray-300"></div>
+          <div class="flex items-center gap-2 step-btn" onclick="scrollToSection('sectionC')">
+            <div id="stepC" class="w-7 h-7 rounded-full border-2 border-gray-300 text-gray-400 flex items-center justify-center text-xs font-bold transition-all">C</div>
+            <span id="stepCLabel" class="text-[13px] font-semibold text-gray-400 transition-all">Career Goals</span>
+          </div>
+        </div>
+
+        <!-- Section A -->
+        <div id="sectionA" class="bg-white border border-gray-200 rounded-xl p-8 mb-6 scroll-mt-6">
+          <div class="flex items-center justify-between mb-6">
+            <h2 class="text-base font-bold text-gray-900">Section A - Personal Information</h2>
+            <span id="badgeA" class="hidden px-2.5 py-0.5 text-[11px] font-semibold rounded-full bg-green-100 text-green-700">Complete</span>
+          </div>
+          <div class="grid grid-cols-3 gap-6 mb-5">
+            <div><label class="text-[13px] font-medium text-gray-700">Full Name <span class="text-red-500">*</span></label><input type="text" data-section="A" data-required="true" placeholder="First name,Lastname" class="mt-1 w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-blue-500" /></div>
+            <div><label class="text-[13px] font-medium text-gray-700">Degree Program <span class="text-red-500">*</span></label><input type="text" data-section="A" data-required="true" placeholder="BS Information Technology" class="mt-1 w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-blue-500" /></div>
+            <div><label class="text-[13px] font-medium text-gray-700">Batch / Year Graduated <span class="text-red-500">*</span></label><input type="text" data-section="A" data-required="true" placeholder="2024" class="mt-1 w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-blue-500" /></div>
+          </div>
+          <div class="grid grid-cols-3 gap-6">
+            <div><label class="text-[13px] font-medium text-gray-700">Contact Number <span class="text-red-500">*</span></label><input type="text" data-section="A" data-required="true" placeholder="+63 *** *** ****" class="mt-1 w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-blue-500" /></div>
+            <div><label class="text-[13px] font-medium text-gray-700">Email Address <span class="text-red-500">*</span></label><input type="text" data-section="A" data-required="true" placeholder="Name@email.com" class="mt-1 w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-blue-500" /></div>
+            <div><label class="text-[13px] font-medium text-gray-700">Current Address <span class="text-red-500">*</span></label><input type="text" data-section="A" data-required="true" placeholder="Makati City, Philippines" class="mt-1 w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-blue-500" /></div>
+          </div>
+        </div>
+
+        <!-- Section B -->
+        <div id="sectionB" class="bg-white border border-gray-200 rounded-xl p-8 mb-6 scroll-mt-6">
+          <div class="flex items-center justify-between mb-6">
+            <h2 class="text-base font-bold text-gray-900">Section B - Current Employment Details</h2>
+            <span id="badgeB" class="hidden px-2.5 py-0.5 text-[11px] font-semibold rounded-full bg-green-100 text-green-700">Complete</span>
+          </div>
+          <div class="mb-5">
+            <label class="text-[13px] font-medium text-gray-700">Employment Status <span class="text-red-500">*</span></label>
+            <div class="flex gap-4 mt-2">
+              <label class="flex items-center gap-1.5 text-sm"><input type="radio" name="empStatus" data-section="B" data-required="true" class="accent-blue-600" /> Employed Full-Time</label>
+              <label class="flex items-center gap-1.5 text-sm"><input type="radio" name="empStatus" class="accent-blue-600" /> Employed Part-Time</label>
+              <label class="flex items-center gap-1.5 text-sm"><input type="radio" name="empStatus" class="accent-blue-600" /> Self-Employed</label>
+              <label class="flex items-center gap-1.5 text-sm"><input type="radio" name="empStatus" class="accent-blue-600" /> Freelance</label>
+              <label class="flex items-center gap-1.5 text-sm"><input type="radio" name="empStatus" class="accent-blue-600" /> Unemployed</label>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-6 mb-5">
+            <div><label class="text-[13px] font-medium text-gray-700">Job Title / Position <span class="text-red-500">*</span></label><input type="text" data-section="B" data-required="true" placeholder="e.g. Junior Software Developer" class="mt-1 w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-blue-500" /></div>
+            <div><label class="text-[13px] font-medium text-gray-700">Company / Organization <span class="text-red-500">*</span></label><input type="text" data-section="B" data-required="true" placeholder="e.g. Accenture Philippines" class="mt-1 w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-blue-500" /></div>
+          </div>
+          <div class="grid grid-cols-2 gap-6 mb-5">
+            <div><label class="text-[13px] font-medium text-gray-700">Industry <span class="text-red-500">*</span></label><input type="text" data-section="B" data-required="true" placeholder="e.g. Information Technology" class="mt-1 w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-blue-500" /></div>
+            <div><label class="text-[13px] font-medium text-gray-700">Work Location <span class="text-red-500">*</span></label><input type="text" data-section="B" data-required="true" placeholder="e.g. BGC, Taguig City" class="mt-1 w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-blue-500" /></div>
+          </div>
+          <div class="grid grid-cols-2 gap-6">
+            <div><label class="text-[13px] font-medium text-gray-700">Monthly Salary Range <span class="text-red-500">*</span></label>
+              <select data-section="B" data-required="true" class="mt-1 w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-blue-500">
+                <option value="">— Select —</option><option>Below ₱15,000</option><option>₱15,000 – ₱25,000</option><option>₱25,001 – ₱40,000</option><option>₱40,001 – ₱60,000</option><option>₱60,001 – ₱100,000</option><option>Above ₱100,000</option>
+              </select>
+            </div>
+            <div>
+              <label class="text-[13px] font-medium text-gray-700">Is your job related to your degree? <span class="text-red-500">*</span></label>
+              <div class="flex gap-4 mt-2">
+                <label class="flex items-center gap-1.5 text-sm"><input type="radio" name="jobRelated" data-section="B" data-required="true" class="accent-blue-600" /> Yes</label>
+                <label class="flex items-center gap-1.5 text-sm"><input type="radio" name="jobRelated" class="accent-blue-600" /> Partially</label>
+                <label class="flex items-center gap-1.5 text-sm"><input type="radio" name="jobRelated" class="accent-blue-600" /> No</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section C -->
+        <div id="sectionC" class="bg-white border border-gray-200 rounded-xl p-8 mb-6 scroll-mt-6">
+          <div class="flex items-center justify-between mb-6">
+            <h2 class="text-base font-bold text-gray-900">Section C - Career Development Goals</h2>
+            <span id="badgeC" class="hidden px-2.5 py-0.5 text-[11px] font-semibold rounded-full bg-green-100 text-green-700">Complete</span>
+          </div>
+          <div class="mb-5">
+            <label class="text-[13px] font-medium text-gray-700">Are you interested in further studies? <span class="text-red-500">*</span></label>
+            <div class="flex gap-4 mt-2">
+              <label class="flex items-center gap-1.5 text-sm"><input type="radio" name="furtherStudies" data-section="C" data-required="true" class="accent-blue-600" /> Yes, currently pursuing</label>
+              <label class="flex items-center gap-1.5 text-sm"><input type="radio" name="furtherStudies" class="accent-blue-600" /> Yes, planning to</label>
+              <label class="flex items-center gap-1.5 text-sm"><input type="radio" name="furtherStudies" class="accent-blue-600" /> No</label>
+            </div>
+          </div>
+          <div class="mb-5">
+            <label class="text-[13px] font-semibold text-gray-700">What skills would you like to develop further? <span class="text-red-500">*</span></label>
+            <textarea rows="3" data-section="C" data-required="true" placeholder="e.g. Cloud computing, data analytics, project management..." class="mt-2 w-full px-4 py-3 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-blue-500 resize-none"></textarea>
+          </div>
+          <div>
+            <label class="text-[13px] font-semibold text-gray-700">Any additional feedback or career updates you'd like to share?</label>
+            <textarea rows="3" data-section="C" placeholder="Optional comments..." class="mt-2 w-full px-4 py-3 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-blue-500 resize-none"></textarea>
+          </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="flex justify-end gap-3 mb-8">
+          <button onclick="saveDraft()" class="px-6 py-2.5 border border-gray-300 text-gray-700 text-sm font-semibold rounded-lg hover:bg-gray-50">Save Draft</button>
+          <button onclick="submitForm()" class="px-6 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-lg">Submit Update</button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // ===== HEADER INTERACTIONS =====
+    document.getElementById('avatarBtn').addEventListener('click',function(){closeAll();document.getElementById('userDropdown').classList.toggle('hidden')});
+    document.getElementById('notifBtn').addEventListener('click',function(){closeAll();document.getElementById('notifDropdown').classList.toggle('hidden')});
+    document.getElementById('markAllReadBtn').addEventListener('click',function(){document.querySelectorAll('.notif-dot').forEach(function(d){d.classList.add('hidden')});document.getElementById('notifBadge').classList.add('hidden')});
+    document.getElementById('searchInput').addEventListener('focus',function(){closeAll();document.getElementById('searchDropdown').classList.remove('hidden')});
+    function closeAll(){document.getElementById('userDropdown').classList.add('hidden');document.getElementById('notifDropdown').classList.add('hidden');document.getElementById('searchDropdown').classList.add('hidden')}
+    document.addEventListener('click',function(e){if(!e.target.closest('#avatarBtn')&&!e.target.closest('#userDropdown'))document.getElementById('userDropdown').classList.add('hidden');if(!e.target.closest('#notifBtn')&&!e.target.closest('#notifDropdown'))document.getElementById('notifDropdown').classList.add('hidden');if(!e.target.closest('#searchContainer'))document.getElementById('searchDropdown').classList.add('hidden')});
+    document.getElementById('logoutBtn').addEventListener('click',function(){if(confirm('Are you sure you want to logout?')){alert('You have been logged out.');window.location.href='login-page.html'}});
+    function showToast(msg){var t=document.getElementById('successToast');document.getElementById('toastMsg').textContent=msg;t.classList.remove('hidden');setTimeout(function(){t.classList.add('hidden')},3000)}
+
+    // ===== STEPPER & VALIDATION =====
+    function scrollToSection(id){var s=document.getElementById(id);if(!s)return;var m=document.getElementById('mainContent');var o=s.offsetTop-m.offsetTop-24;m.scrollTo({top:o,behavior:'smooth'});s.classList.add('section-highlight');setTimeout(function(){s.classList.remove('section-highlight')},1600)}
+
+    function isSectionComplete(s){
+      var el=document.getElementById('section'+s);
+      if(s==='A'){var texts=el.querySelectorAll('input[type="text"][data-required="true"]');return Array.from(texts).every(function(i){return i.value.trim()!==''})}
+      if(s==='B'){var texts=el.querySelectorAll('input[type="text"][data-required="true"]');var allText=Array.from(texts).every(function(i){return i.value.trim()!==''});var sel=el.querySelector('select[data-required="true"]');var selOk=sel&&sel.value!=='';var emp=document.querySelector('input[name="empStatus"]:checked')!==null;var rel=document.querySelector('input[name="jobRelated"]:checked')!==null;return allText&&selOk&&emp&&rel}
+      if(s==='C'){var fur=document.querySelector('input[name="furtherStudies"]:checked')!==null;var tas=el.querySelectorAll('textarea[data-required="true"]');var allTa=Array.from(tas).every(function(t){return t.value.trim()!==''});return fur&&allTa}
+      return false;
+    }
+
+
+
+    function updateStepper(){
+      var sections=['A','B','C'];var activeFound=false;
+      sections.forEach(function(s){
+        var circle=document.getElementById('step'+s);var label=document.getElementById('step'+s+'Label');var badge=document.getElementById('badge'+s);var done=isSectionComplete(s);
+        if(done){badge.classList.remove('hidden')}else{badge.classList.add('hidden')}
+        if(done){circle.className='w-7 h-7 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs font-bold transition-all';circle.innerHTML='&#10003;';label.className='text-[13px] font-semibold text-blue-600 transition-all'}
+        else if(!activeFound){circle.className='w-7 h-7 rounded-full border-2 border-blue-600 text-blue-600 flex items-center justify-center text-xs font-bold transition-all';circle.innerHTML=s;label.className='text-[13px] font-semibold text-blue-600 transition-all';activeFound=true}
+        else{circle.className='w-7 h-7 rounded-full border-2 border-gray-300 text-gray-400 flex items-center justify-center text-xs font-bold transition-all';circle.innerHTML=s;label.className='text-[13px] font-semibold text-gray-400 transition-all'}
+      });
+    }
+
+    function saveDraft(){var c=['A','B','C'].filter(function(s){return isSectionComplete(s)}).length;showToast('Draft saved! '+c+' of 3 sections completed.')}
+    function submitForm(){
+      var names={A:'Personal Info',B:'Employment',C:'Career Goals'};var inc=['A','B','C'].filter(function(s){return !isSectionComplete(s)});
+      if(inc.length>0){var m=inc.map(function(s){return 'Section '+s+' ('+names[s]+')'}).join('\n  • ');alert('Please complete all required fields:\n  • '+m);scrollToSection('section'+inc[0])}
+      else{showToast('Employment information submitted successfully!')}
+    }
+
+    document.addEventListener('input',updateStepper);document.addEventListener('change',updateStepper);updateStepper();
+  </script>
+</body>
+</html>
